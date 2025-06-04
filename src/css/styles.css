@@ -1,0 +1,73 @@
+@import "./normalize.css";
+@import "./global.css";
+:root {
+  --space-3xl: 56px;
+  --space-2xl: 48px;
+  --space-xl: 36px;
+  --space-lg: 24px;
+  --space-md: 16px;
+  --white: #fff;
+}
+/* starting header */
+.po-header {
+  position: fixed;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* right: var(--space-lg); */
+  /* left: var(--space-lg); */
+  /* TODO:FIX HEADER HORIZONTAL SPACE */
+}
+.po-header > nav > ul {
+  display: flex;
+  gap: var(--space-md);
+}
+
+/* sections */
+.po-sec {
+  height: 100vh;
+  background-color: rgb(34, 93, 93);
+}
+#home {
+  padding-top: var(--space-3xl);
+  background-image: url("https://images.unsplash.com/photo-1516721306533-364eee523197");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.po-header_logo-txt {
+  font-size: 3rem;
+  background: linear-gradient(125deg, #041d3d, white, crimson);
+  font-weight: 900;
+  background-clip: text;
+  color: transparent;
+  --webkit-background-clip: text;
+  --webkit-text-fill-color: transparent;
+}
+.po-header__nav > ul > li > a {
+  color: var(--white);
+  font-weight: bold;
+  transition: all 0.3s ease-in;
+  font: size 2rem;
+  display: block;
+  position: relative;
+}
+.po-header__nav > ul > li > a::after {
+  position: absolute;
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0%;
+  background-color: aquamarine;
+  /* opacity: 0; */
+  transition: all 0.2s ease-in;
+}
+.po-header__nav > ul > li > a:hover {
+  color: aquamarine;
+}
+.po-header__nav > ul > li > a:hover::after {
+  width: 100%;
+}
