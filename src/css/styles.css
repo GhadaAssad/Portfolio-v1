@@ -1,0 +1,20 @@
+@import "./normalize.css";
+@import "./global.css";
+:root {
+  --space-lg: 24px;
+}
+/* starting header */
+.po-header {
+  position: fixed;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--space-lg);
+}
+/* sections */
+.po-sec {
+  height: 100vh;
+  background-color: aqua;
+}
